@@ -2,14 +2,14 @@
 @import url("https://fonts.googleapis.com/css2?family=Fraunces:wght@400;700&display=swap");
 
 :root {
-  --cream: hsl(30, 38%, 92%);
-  --dark-cyan: hsl(158, 36%, 37%);
-  --darker-cyan: hsl(159, 36%, 26%);
-  --very-dark-blue: hsl(212, 21%, 14%);
-  --dark-grayish-blue: hsl(228, 12%, 48%);
-  --white: hsl(0, 0%, 100%);
-  --montserrat: "Montserrat", sans-serif;
+  --heading-color: #22272d;
+  --paragraph-font-color: #686872;
+  --button-color: #3d8168;
+  --button-color-dark: #1a4031;
+  --inner-bg: #ffffff;
+  --bg-color: #f3eae3;
   --fraunces: "Fraunces", serif;
+  --montserrat: "Montserrat", sans-serif;
 }
 
 * {
@@ -22,7 +22,7 @@ body {
   scrollbar-width: none;
   overflow-y: scroll;
   box-sizing: border-box;
-  background-color: var(--cream);
+  background-color: var(--bg-color);
   font-size: 0.875rem;
 }
 body::-webkit-scrollbar {
@@ -42,7 +42,7 @@ li {
 
 /* Main Container */
 main {
-  background-color: var(--white);
+  background-color: var(--inner-bg);
   display: grid;
   grid-template-columns: repeat(2, 1fr);
   max-width: 90%;
@@ -70,24 +70,26 @@ main {
 
 h1 {
   font-family: var(--montserrat);
-  font-weight: lighter;
+  font-weight: 400;
   text-transform: uppercase;
   letter-spacing: 6px;
   font-size: 0.7rem;
-  color: var(--dark-grayish-blue);
+  color: var(--paragraph-font-color);
 }
 h2 {
   font-family: var(--fraunces);
-  font-size: 1.9rem;
-  line-height: 2rem;
+  font-size: 2.1rem;
+  line-height: 2.2rem;
   font-weight: 700;
+  padding-right: 1rem;
+  color: var(--heading-color);
 }
 
-.info-section p {
-  font-family: var(--monserrat);
+.info p {
+  font-family: var(--montserrat);
   font-weight: lighter;
   font-size: 0.9rem;
-  color: var(--dark-grayish-blue);
+  color: var(--paragraph-font-color);
   line-height: 1.4rem;
 }
 
@@ -98,7 +100,7 @@ h2 {
 }
 
 .pricing p {
-  color: var(--dark-cyan);
+  color: var(--button-color);
   font-family: var(--fraunces);
   font-size: 2rem;
   display: flex;
@@ -110,19 +112,19 @@ h2 {
 }
 
 .pricing p span {
-  font-family: var(--monserrat);
-  font-weight: lighter;
-  color: var(--dark-grayish-blue);
+  font-family: var(--montserrat);
+  font-weight: 400;
+  color: var(--paragraph-font-color);
   text-decoration: line-through;
   font-size: 0.8rem;
 }
 
 button {
   cursor: pointer;
-  border: 1px solid var(--dark-cyan);
-  background-color: var(--dark-cyan);
-  color: var(--white);
-  font-family: var(--monserrat);
+  border: none;
+  background-color: var(--button-color);
+  color: var(--inner-bg);
+  font-family: var(--montserrat);
   font-weight: 700;
   border-radius: 10px;
   padding: 0.9rem;
@@ -137,7 +139,7 @@ button {
 @media (hover: hover) {
   button:hover {
     transition: all ease-in-out 0.2s;
-    background-color: var(--darker-cyan);
+    background-color: var(--button-color-dark);
   }
 }
 
